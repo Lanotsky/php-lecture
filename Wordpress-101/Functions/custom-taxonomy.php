@@ -17,8 +17,8 @@ function custom_taxonomies() {
 		'edit_item' => 'Edit Type',
 		'update_item' => 'Update Type',
 		'add_new_item' => 'Add New Work Type',
-		'new_item_name' => 'New Type Name',
-		'menu_name' => 'Types'
+		'new_item_name' => 'New Type Name', // will add on dashboard
+		'menu_name' => 'Types' // will show on dashboard
 	);
 	
 	$args = array(
@@ -30,7 +30,7 @@ function custom_taxonomies() {
 		'rewrite' => array( 'slug' => 'type' )
 	);
 	
-	register_taxonomy('type', array('portfolio'), $args);
+	register_taxonomy('type', array('portfolio'), $args); // specify to what post-type the 'type' taxonomy is for
 	
 	//add new taxonomy NOT hierarchical
 	
